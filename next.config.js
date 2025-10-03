@@ -8,8 +8,8 @@ const nextConfig = {
   trailingSlash: true,
   reactStrictMode: true,
   // For GitHub Pages deployment with custom domain or username.github.io/repo-name
-  // Comment this out if using a custom domain
-  basePath: '/immer-website',
+  // basePath is NOT needed when using a custom domain like immer3d.com
+  // basePath: '/immer-website',
   experimental: {
     staticGenerationRetryCount: 1,
     staticGenerationMaxConcurrency: 8,
