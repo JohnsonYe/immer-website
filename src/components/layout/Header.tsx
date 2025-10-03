@@ -31,12 +31,6 @@ export default function Header() {
                 {item.name}
               </Link>
             ))}
-            <Link
-              href="/contact"
-              className="bg-immer-orange text-white px-6 py-2 rounded-lg hover:bg-orange-600 transition-colors font-medium"
-            >
-              Get in Touch
-            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -67,13 +61,6 @@ export default function Header() {
                   {item.name}
                 </Link>
               ))}
-              <Link
-                href="/contact"
-                className="bg-immer-orange text-white px-6 py-2 rounded-lg hover:bg-orange-600 transition-colors font-medium text-center"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Get in Touch
-              </Link>
             </div>
           </div>
         )}

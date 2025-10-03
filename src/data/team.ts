@@ -2,49 +2,36 @@ export interface TeamMember {
   name: string;
   title: string;
   role: string;
-  experience: string[];
-  education: string;
-  founderStory?: string;
+  description: string;
+  expertise: string[];
 }
 
 export const teamMembers: TeamMember[] = [
   {
     name: 'Johnson Ye',
-    title: 'Founder and CEO',
+    title: 'Founder & CEO',
     role: 'CEO',
-    experience: [
-      'Founded and operates RGB Run (Dec 2024)',
-      'Founded and operates Cloud Escape Room (July 2024)',
-      'Former Amazon software engineer (joined 2020)',
-      'Former IoT full-stack engineer at Locbit (2018)',
-    ],
-    education: 'UC San Diego - Computer Science and Mathematics (2018)',
-    founderStory:
-      '7 years of software engineering experience (5 years at Amazon, IoT startup previously), specializing in global supply chain automation. Successfully launched two retail escape rooms in 1.5 years from scratch, identifying critical pain points in design and manufacturing for small businesses scaling globally, which inspired Immer\'s creation.',
+    description:
+      'Johnson brings 7 years of software engineering experience, including 5 years at Amazon specializing in global supply chain automation and IoT systems. After founding two successful escape room businesses, he identified critical gaps in design-to-manufacturing workflows for small businesses scaling globally, inspiring the creation of Immer. His unique blend of technical expertise and entrepreneurial experience drives Immer\'s vision of democratizing industrial design through AI.',
+    expertise: ['Supply Chain Automation', 'Product Strategy', 'Business Development'],
   },
   {
     name: 'Yiling Chen',
-    title: 'Co-Founder and AI Leader',
+    title: 'Co-Founder & AI Leader',
     role: 'AI Leader',
-    experience: [
-      'Staff Engineer at Tesla Vision Automation Team, led AI team to deploy computer vision-based systems in four factories (Joined 2022)',
-      'Former AR platform backend engineer at Bytedance AI Lab (Joined 2020)',
-      'Former backend engineer at Amazon AWS identity team (Joined 2016)',
-    ],
-    education: 'MS in Computer Science, Carnegie Mellon (2016)',
+    description:
+      'Yiling is a Staff Engineer at Tesla\'s Vision Automation Team, where he leads AI initiatives deploying computer vision systems across four factories. With prior experience building AR platforms at Bytedance AI Lab and backend systems at Amazon AWS, he brings deep expertise in production-scale AI systems. His background in both cutting-edge AI research and industrial deployment makes him uniquely qualified to lead Immer\'s AI development.',
+    expertise: ['Computer Vision', 'AI/ML Systems', 'Industrial Automation'],
   },
   {
     name: 'Andy Sun',
-    title: 'Co-Founder and Dev Leader',
+    title: 'Co-Founder & Dev Leader',
     role: 'Dev Leader',
-    experience: [
-      'Head of AI Adoption program for Amazon India, leads IN and NA departments (2025)',
-      'Senior Engineer at Amazon India, leads B2B third party seller new business program and supply chain system optimization (2022)',
-      'Backend Engineer at Amazon India emerging market (2018)',
-    ],
-    education: 'BS in Computer Science, University of Washington (2010)',
+    description:
+      'Andy currently leads AI Adoption programs for Amazon India, overseeing departments across India and North America. His extensive experience includes building B2B seller platforms and optimizing supply chain systems at Amazon. With a proven track record of scaling complex technical systems and leading engineering teams in emerging markets, Andy drives Immer\'s platform development and technical architecture.',
+    expertise: ['Platform Architecture', 'B2B Systems', 'Team Leadership'],
   },
 ];
 
 export const teamCompetitiveness =
-  'Team members come from top tech companies, combining expertise in AI, industrial platforms, supply chain, and engineering execution.';
+  'Our leadership team combines world-class expertise from Tesla, Amazon, and Bytedance, bringing together deep knowledge in AI, supply chain automation, and scalable platform development.';

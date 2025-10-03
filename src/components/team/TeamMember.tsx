@@ -1,4 +1,4 @@
-import { User, GraduationCap, Briefcase } from 'lucide-react';
+import { User, Sparkles } from 'lucide-react';
 import { TeamMember as TeamMemberType } from '@/data/team';
 
 interface TeamMemberProps {
@@ -16,34 +16,30 @@ export default function TeamMember({ member }: TeamMemberProps) {
       {/* Name & Title */}
       <div className="text-center mb-6">
         <h3 className="text-2xl font-bold text-gray-900 mb-2">{member.name}</h3>
-        <p className="text-lg font-semibold text-immer-orange mb-1">{member.title}</p>
-        {member.founderStory && (
-          <p className="text-sm text-gray-600 italic mt-4 leading-relaxed">{member.founderStory}</p>
-        )}
+        <p className="text-lg font-semibold text-immer-orange">{member.title}</p>
       </div>
 
-      {/* Experience */}
+      {/* Description */}
       <div className="mb-6 flex-grow">
-        <div className="flex items-center space-x-2 mb-3">
-          <Briefcase className="w-5 h-5 text-immer-blue" />
-          <h4 className="font-semibold text-gray-900">Experience</h4>
-        </div>
-        <ul className="space-y-2">
-          {member.experience.map((exp, index) => (
-            <li key={index} className="text-sm text-gray-600 leading-relaxed pl-4 border-l-2 border-gray-200">
-              {exp}
-            </li>
-          ))}
-        </ul>
+        <p className="text-gray-600 leading-relaxed text-center">{member.description}</p>
       </div>
 
-      {/* Education */}
-      <div>
-        <div className="flex items-center space-x-2 mb-2">
-          <GraduationCap className="w-5 h-5 text-immer-purple" />
-          <h4 className="font-semibold text-gray-900">Education</h4>
+      {/* Expertise Tags */}
+      <div className="mt-auto">
+        <div className="flex items-center justify-center space-x-2 mb-3">
+          <Sparkles className="w-4 h-4 text-immer-orange" />
+          <h4 className="font-semibold text-gray-900 text-sm">Core Expertise</h4>
         </div>
-        <p className="text-sm text-gray-600 pl-4 border-l-2 border-gray-200">{member.education}</p>
+        <div className="flex flex-wrap gap-2 justify-center">
+          {member.expertise.map((skill, index) => (
+            <span
+              key={index}
+              className="px-3 py-1 bg-gradient-to-br from-blue-50 to-purple-50 text-immer-navy text-sm font-medium rounded-full border border-gray-200"
+            >
+              {skill}
+            </span>
+          ))}
+        </div>
       </div>
     </div>
   );

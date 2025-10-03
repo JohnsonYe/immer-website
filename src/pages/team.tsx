@@ -5,24 +5,25 @@ export default function Team() {
   return (
     <>
       <Head>
-        <title>Team - Immer</title>
+        <title>Leadership Team - Immer</title>
         <meta
           name="description"
-          content="Meet the leadership team behind Immer - industry experts from Tesla and Amazon specializing in AI, software engineering, and supply chain management."
+          content="Meet the leadership team behind Immer - world-class experts from Tesla, Amazon, and Bytedance driving innovation in AI-powered design and manufacturing."
         />
-        <meta property="og:title" content="Team - Immer" />
+        <meta property="og:title" content="Leadership Team - Immer" />
         <meta
           property="og:description"
-          content="Led by industry experts from Tesla and Amazon, specializing in AI, software engineering, supply chain management, and 3D Gen-AI"
+          content="World-class expertise from Tesla, Amazon, and Bytedance in AI, supply chain automation, and platform development."
         />
       </Head>
 
       {/* Hero Section */}
       <section className="gradient-bg text-white py-20">
         <div className="container-custom text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">Our Team</h1>
-          <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-            Building the future of AI-driven design and manufacturing
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">Leadership Team</h1>
+          <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
+            Bringing together world-class talent from leading tech companies to transform
+            the future of design and manufacturing
           </p>
         </div>
       </section>
