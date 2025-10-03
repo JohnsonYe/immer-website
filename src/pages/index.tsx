@@ -10,15 +10,15 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Immer - AI-Powered Design & Manufacturing Platform</title>
+        <title>Immer - Transform Ideas Into Manufacturing Reality with AI</title>
         <meta
           name="description"
-          content="Immer simplifies and automates mechanical design-to-production workflows through AI. Connect designers, manufacturers, and global vendors in one integrated ecosystem."
+          content="AI-powered platform bridging creativity and manufacturing. Create production-ready 3D models, automate design workflows, and connect with global suppliers seamlessly."
         />
         <meta property="og:title" content="Immer - AI-Powered Design & Manufacturing Platform" />
         <meta
           property="og:description"
-          content="A bridge between creativity and manufacturing, enabling every creator to turn ideas into reality"
+          content="Transform ideas into manufacturing reality. AI-powered platform for mechanical design automation and global manufacturing connections."
         />
       </Head>
 

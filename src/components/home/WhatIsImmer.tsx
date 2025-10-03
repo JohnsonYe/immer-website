@@ -1,35 +1,39 @@
-import { Target, TrendingDown, Globe2 } from 'lucide-react';
+import { Rocket, Zap, Users } from 'lucide-react';
 
 export default function WhatIsImmer() {
   const benefits = [
     {
-      icon: Target,
-      title: 'Streamline Product Development',
-      description: 'Accelerate your design-to-production workflow with AI automation',
+      icon: Rocket,
+      title: 'Accelerate Development',
+      description: 'Transform design concepts into production-ready models in a fraction of the time with AI-powered automation.',
     },
     {
-      icon: TrendingDown,
-      title: 'Reduce Costs',
-      description: 'Cut design and manufacturing costs through intelligent optimization',
+      icon: Zap,
+      title: 'Intelligent Optimization',
+      description: 'Leverage industrial-grade AI trained on thousands of real-world mechanical designs for precise, manufacturable outputs.',
     },
     {
-      icon: Globe2,
-      title: 'Global Market Access',
-      description: 'Remove traditional barriers to global market entry for creators',
+      icon: Users,
+      title: 'Unified Ecosystem',
+      description: 'Connect designers, manufacturers, and suppliers in one integrated platform for seamless collaboration.',
     },
   ];
 
   return (
-    <section id="what-is-immer" className="section-padding bg-gray-50">
+    <section id="what-is-immer" className="section-padding bg-white">
       <div className="container-custom">
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            What is <span className="gradient-text">Immer</span>
+        <div className="max-w-4xl mx-auto text-center mb-16">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-gray-900">
+            Reimagining Mechanical Design
           </h2>
-          <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-            Immer simplifies and automates mechanical design-to-production workflows through AI.
-            We create an integrated ecosystem connecting designers, manufacturers, and global vendors,
-            enabling seamless collaboration and monetization.
+          <p className="text-xl md:text-2xl text-gray-600 leading-relaxed mb-4">
+            Immer is an AI-powered platform that simplifies and automates the entire
+            design-to-production workflow for mechanical and industrial designers.
+          </p>
+          <p className="text-lg text-gray-600 leading-relaxed">
+            We bridge the gap between creative vision and manufacturing execution,
+            creating an integrated ecosystem where designers, manufacturers, and global
+            vendors collaborate seamlessly to bring products to life.
           </p>
         </div>
 
@@ -38,9 +42,9 @@ export default function WhatIsImmer() {
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100"
+              className="bg-gradient-to-br from-gray-50 to-blue-50/30 p-8 rounded-2xl border-2 border-gray-200 hover:border-immer-blue transition-all hover:shadow-lg"
             >
-              <div className="bg-gradient-to-br from-immer-blue to-immer-purple p-3 rounded-lg w-fit mb-4">
+              <div className="bg-gradient-to-br from-immer-blue to-immer-purple p-4 rounded-xl w-fit mb-6">
                 <benefit.icon className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold mb-3 text-gray-900">{benefit.title}</h3>

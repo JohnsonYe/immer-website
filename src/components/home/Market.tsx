@@ -1,102 +1,83 @@
-import { TrendingUp, Award, CheckCircle } from 'lucide-react';
+import { TrendingUp, CheckCircle2, BarChart3 } from 'lucide-react';
 
 export default function Market() {
-  const markets = [
-    {
-      name: 'Traditional 3D CAD Software',
-      size: '$12.55B',
-      year: '2024',
-    },
-    {
-      name: 'AI-Driven 3D Modeling Tools',
-      size: '$35.81B → $91.32B',
-      year: '2024-2033',
-    },
-    {
-      name: 'Manufacturing Operations Management',
-      size: '$21.43B',
-      year: '2023',
-    },
-  ];
-
-  const validation = [
+  const impact = [
     {
       icon: TrendingUp,
       value: '70%',
-      label: 'Design Efficiency Improvement',
+      label: 'Faster Design Cycles',
+      description: 'Reduce time from concept to production',
     },
     {
-      icon: TrendingUp,
+      icon: BarChart3,
       value: '40%',
-      label: 'Logistics Cost Reduction',
+      label: 'Cost Reduction',
+      description: 'Lower manufacturing and logistics costs',
     },
     {
-      icon: Award,
+      icon: CheckCircle2,
       value: '50+',
-      label: 'Escape Room Collaborations',
+      label: 'Active Partners',
+      description: 'Design studios and manufacturers',
     },
   ];
 
+  const industries = [
+    'Industrial Equipment & Manufacturing',
+    'Consumer Product Design',
+    'Furniture & Modular Systems',
+    'Entertainment & Experience Design',
+    'Robotics & Automation',
+    'Educational Tools & Equipment',
+  ];
+
   return (
-    <section className="section-padding bg-gradient-to-br from-gray-50 to-blue-50/30">
+    <section className="section-padding bg-white">
       <div className="container-custom">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Market <span className="gradient-text">Opportunity</span>
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-gray-900">
+            Real-World <span className="gradient-text">Impact</span>
           </h2>
-          <p className="text-lg text-gray-700 leading-relaxed">
-            Immer is strategically positioned at the intersection of several rapidly growing markets,
-            each contributing to a combined opportunity exceeding{' '}
-            <span className="font-bold text-immer-orange">$300 billion globally</span>.
+          <p className="text-xl text-gray-600 leading-relaxed">
+            Our platform delivers measurable results for designers and manufacturers
+            across multiple industries.
           </p>
         </div>
 
-        {/* Market Size Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-          {markets.map((market, index) => (
+        {/* Impact Metrics */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          {impact.map((item, index) => (
             <div
               key={index}
-              className="bg-white p-6 rounded-xl border-2 border-gray-200 hover:border-immer-blue transition-all shadow-lg"
+              className="bg-gradient-to-br from-gray-50 to-blue-50/30 p-8 rounded-2xl border-2 border-gray-200 hover:border-immer-blue transition-all text-center"
             >
-              <h3 className="font-semibold text-gray-900 mb-3 text-lg">{market.name}</h3>
-              <div className="text-3xl font-bold text-immer-orange mb-2">{market.size}</div>
-              <div className="text-sm text-gray-500">{market.year}</div>
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-immer-blue to-immer-purple rounded-full mb-4">
+                <item.icon className="w-8 h-8 text-white" />
+              </div>
+              <div className="text-5xl font-bold bg-gradient-to-r from-immer-blue to-immer-purple bg-clip-text text-transparent mb-2">
+                {item.value}
+              </div>
+              <div className="text-xl font-bold text-gray-900 mb-2">{item.label}</div>
+              <p className="text-gray-600">{item.description}</p>
             </div>
           ))}
         </div>
 
-        {/* Early Validation */}
-        <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 border border-gray-200">
-          <h3 className="text-2xl md:text-3xl font-bold text-center mb-10">
-            Early <span className="gradient-text">Validation</span>
+        {/* Industries Served */}
+        <div className="bg-gradient-to-br from-immer-navy to-immer-blue text-white rounded-2xl p-8 md:p-12 shadow-xl">
+          <h3 className="text-2xl md:text-3xl font-bold text-center mb-8">
+            Industries We Serve
           </h3>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {validation.map((item, index) => (
-              <div key={index} className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-immer-blue to-immer-purple rounded-full mb-4">
-                  <item.icon className="w-8 h-8 text-white" />
-                </div>
-                <div className="text-4xl font-bold text-immer-navy mb-2">{item.value}</div>
-                <div className="text-gray-600 font-medium">{item.label}</div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
+            {industries.map((industry, index) => (
+              <div
+                key={index}
+                className="flex items-center space-x-3 bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/20"
+              >
+                <CheckCircle2 className="w-5 h-5 text-immer-orange flex-shrink-0" />
+                <span className="text-blue-100">{industry}</span>
               </div>
             ))}
-          </div>
-
-          {/* Key Benefits */}
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="flex items-center space-x-2 text-gray-700">
-              <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-              <span className="text-sm">Subscription-based AI tools</span>
-            </div>
-            <div className="flex items-center space-x-2 text-gray-700">
-              <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-              <span className="text-sm">Modular shipping like IKEA</span>
-            </div>
-            <div className="flex items-center space-x-2 text-gray-700">
-              <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-              <span className="text-sm">Global supplier matching</span>
-            </div>
           </div>
         </div>
       </div>
